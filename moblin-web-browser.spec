@@ -20,6 +20,7 @@ URL: http://www.moblin.org
 Release: %{release}
 Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{sversion}.tar.bz2
 Patch0: moblin-web-browser-1.9.3-idldir.patch
+Patch1: moblin-web-browser-1.9.3-stagecheck.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires: clutter-devel
@@ -46,6 +47,7 @@ Moblin web browser
 %prep
 %setup -q -n %{name}-%{sversion}
 %patch0 -p1
+%patch1 -p1 -b .stagecheck
 
 %build
 NOCONFIGURE=nil ./autogen.sh
