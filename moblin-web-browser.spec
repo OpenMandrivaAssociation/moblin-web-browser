@@ -1,11 +1,24 @@
+%define version 1.9.3
+%define rel 1
+%define use_git 0
+%define gitcommit 56cc6cd9cbdc85eaa0224676fa55a5dc752532be
+
+%if %{use_git}
+%define release %mkrel 2.%{gitcommit}.%{rel}
+%define sversion %{gitcommit}
+%else
+%define release %mkrel %{rel}
+%define sversion %{version}
+%endif
+
 Name: moblin-web-browser
 Summary: Moblin web browser
 Group: Networking/WWW
-Version: 1.9.3
+Version: %{version}
 License: LGPL
 URL: http://www.moblin.org
-Release: %mkrel 1
-Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{version}.tar.bz2
+Release: %{release}
+Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{sversion}.tar.bz2
 Patch0: moblin-web-browser-1.9.3-idldir.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -31,7 +44,7 @@ Requires: clutter-mozembed
 Moblin web browser
 
 %prep
-%setup -q 
+%setup -q -n %{name}-%{sversion}
 %patch0 -p1
 
 %build
