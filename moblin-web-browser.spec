@@ -39,6 +39,7 @@ BuildRequires: gnome-common
 BuildRequires: intltool
 BuildRequires: gettext
 BuildRequires: moblin-panel-devel
+BuildRequires: zip
 
 Requires: xulrunner-headless
 Requires: clutter-mozembed
