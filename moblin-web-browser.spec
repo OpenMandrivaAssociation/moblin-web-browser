@@ -37,6 +37,7 @@ BuildRequires: libdbus-glib-devel
 BuildRequires: gnome-common
 BuildRequires: intltool
 BuildRequires: gettext
+BuildRequires: moblin-panel-devel
 
 Requires: xulrunner-headless
 Requires: clutter-mozembed
