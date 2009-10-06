@@ -29,8 +29,8 @@ BuildRequires: clutter-mozembed-devel
 BuildRequires: mozilla-headless-services-devel
 BuildRequires: xulrunner-headless-devel
 BuildRequires: nbtk-devel
-BuildRequires: libmesagl1-devel
-BuildRequires: libunique-devel
+BuildRequires: mesagl-devel
+BuildRequires: unique-devel
 BuildRequires: libgtk+2-devel
 BuildRequires: startup-notification-devel
 BuildRequires: libdbus-glib-devel
