@@ -47,6 +47,14 @@ Requires: clutter-mozembed
 %description
 Moblin web browser
 
+%package panel
+Summary: Moblin web panel
+Group: Networking/WWW
+Requires: %{name} = %{version}-%{release}
+
+%description panel
+Moblin web panel
+
 %prep
 %setup -q -n %{name}-%{sversion}
 %patch0 -p1
@@ -72,6 +80,9 @@ rm -rf %{buildroot}
 %{_datadir}/%{name}/*
 %{_datadir}/pixmaps/*
 %{_libdir}/xulrunner-1.9.2a1pre*/*
+%{_datadir}/locale/*
+
+%files panel
+%defattr(-,root,root,-)
 %{_libexecdir}/moblin-panel-internet
 %{_datadir}/dbus-1/services/*service
-%{_datadir}/locale/*
