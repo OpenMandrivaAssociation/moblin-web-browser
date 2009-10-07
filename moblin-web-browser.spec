@@ -1,5 +1,5 @@
 %define version 1.9.3
-%define rel 1
+%define rel 2
 %define use_git 0
 %define gitcommit 56cc6cd9cbdc85eaa0224676fa55a5dc752532be
 
@@ -69,18 +69,18 @@ NOCONFIGURE=nil ./autogen.sh
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+%find_lang %{name}
 
 %clean
 rm -rf %{buildroot}
 
-%files 
+%files -f %{name}.lang
 %defattr(-,root,root,-)
 %{_bindir}/%{name}
 %{_datadir}/applications/*.desktop
 %{_datadir}/%{name}/*
 %{_datadir}/pixmaps/*
 %{_libdir}/xulrunner-1.9.2a1pre*/*
-%{_datadir}/locale/*
 
 %files panel
 %defattr(-,root,root,-)
