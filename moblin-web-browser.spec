@@ -1,5 +1,5 @@
-%define version 1.9.3
-%define rel 2
+%define version 2.1.1
+%define rel 1
 %define use_git 0
 %define gitcommit 56cc6cd9cbdc85eaa0224676fa55a5dc752532be
 
@@ -18,10 +18,9 @@ Version: %{version}
 License: LGPL
 URL: http://www.moblin.org
 Release: %{release}
-Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{sversion}.tar.bz2
+Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{version}.tar.bz2
 Patch0: moblin-web-browser-1.9.3-idldir.patch
-Patch1: moblin-web-browser-1.9.3-stagecheck.patch
-Patch2: moblin-web-browser-1.9.3-lib64.patch
+Patch1: moblin-web-browser-1.9.3-lib64.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires: clutter-devel
@@ -58,8 +57,7 @@ Moblin web panel
 %prep
 %setup -q -n %{name}-%{sversion}
 %patch0 -p1
-%patch1 -p1 -b .stagecheck
-%patch2 -p1 -b .lib64
+%patch1 -p1 -b .lib64
 
 %build
 NOCONFIGURE=nil ./autogen.sh
