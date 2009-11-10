@@ -1,7 +1,8 @@
 %define version 2.1.1
-%define rel 1
+%define rel 2
 %define use_git 0
-%define gitcommit 56cc6cd9cbdc85eaa0224676fa55a5dc752532be
+%define gitcommit 0
+#56cc6cd9cbdc85eaa0224676fa55a5dc752532be
 
 %if %{use_git}
 %define release %mkrel 2.%{gitcommit}.%{rel}
