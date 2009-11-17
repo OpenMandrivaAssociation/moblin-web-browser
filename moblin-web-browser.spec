@@ -1,5 +1,5 @@
 %define version 2.1.1
-%define rel 3
+%define rel 4
 %define use_git 0
 %define gitcommit 0
 #56cc6cd9cbdc85eaa0224676fa55a5dc752532be
@@ -43,7 +43,6 @@ BuildRequires: zip
 
 Requires: xulrunner-headless
 Requires: clutter-mozembed
-Requires: libxulrunner = 1.9.1.4
 
 %description
 Moblin web browser
