@@ -1,0 +1,12 @@
+--- moblin-web-browser-1.9.3/configure.ac.old	2009-10-06 10:13:42.000000000 -0400
++++ moblin-web-browser-1.9.3/configure.ac	2009-10-06 10:13:53.000000000 -0400
+@@ -70,7 +70,7 @@
+    PKG_CHECK_MODULES(MOZILLA_HEADLESS, mozilla-headless)
+    MOZHOME=`${PKG_CONFIG} --variable=prefix mozilla-headless`"/lib/xulrunner-"`${PKG_CONFIG} --modversion mozilla-headless`
+    AC_SUBST([MOZHOME])
+-   MOZIDLDIR=`${PKG_CONFIG} --variable=idldir libxul`""
++   MOZIDLDIR=`${PKG_CONFIG} --variable=idldir libxul-headless`""
+    AC_SUBST([MOZIDLDIR])
+ 
+    AC_PATH_PROG(DBUSBINDINGTOOL, dbus-binding-tool)
+

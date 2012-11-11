@@ -1,0 +1,12 @@
+diff -p -up moblin-web-browser-1.9.3/configure.ac.lib64 moblin-web-browser-1.9.3/configure.ac
+--- moblin-web-browser-1.9.3/configure.ac.lib64	2009-10-07 00:55:21.000000000 +0200
++++ moblin-web-browser-1.9.3/configure.ac	2009-10-07 01:03:57.000000000 +0200
+@@ -68,7 +68,7 @@ if test "x$build_browser" = "xyes"; then
+    PKG_CHECK_MODULES(DBUS, dbus-glib-1)
+ 
+    PKG_CHECK_MODULES(MOZILLA_HEADLESS, mozilla-headless)
+-   MOZHOME=`${PKG_CONFIG} --variable=prefix mozilla-headless`"/lib/xulrunner-"`${PKG_CONFIG} --modversion mozilla-headless`
++   MOZHOME=`${PKG_CONFIG} --variable=sdkdir mozilla-headless`"/../xulrunner-"`${PKG_CONFIG} --modversion mozilla-headless`
+    AC_SUBST([MOZHOME])
+    MOZIDLDIR=`${PKG_CONFIG} --variable=idldir libxul-headless`""
+    AC_SUBST([MOZIDLDIR])
