@@ -17,7 +17,7 @@ Summary: Moblin web browser
 Group: Networking/WWW
 Version: %{version}
 License: LGPL
-URL: http://www.moblin.org
+URL: https://www.moblin.org
 Release: %{release}
 Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{version}.tar.bz2
 Patch0: moblin-web-browser-1.9.3-idldir.patch
