@@ -24,6 +24,11 @@ Patch0: moblin-web-browser-1.9.3-idldir.patch
 Patch1: moblin-web-browser-1.9.3-lib64.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: clutter-devel
 BuildRequires: clutter-gtk-devel
 BuildRequires: clutter-mozembed-devel
