@@ -5,10 +5,10 @@
 #56cc6cd9cbdc85eaa0224676fa55a5dc752532be
 
 %if %{use_git}
-%define release %mkrel 2.%{gitcommit}.%{rel}
+%define release 2.%{gitcommit}.%{rel}.1
 %define sversion %{gitcommit}
 %else
-%define release %mkrel %{rel}
+%define release %{rel}.1
 %define sversion %{version}
 %endif
 
